@@ -51,9 +51,12 @@
     }
     function makeOrder() {
       var name = document.getElementById('names').value, email = document.getElementById('emails').value, address = document.getElementById('address').value, city= document.getElementById('city').value, zip= document.getElementById('zip').value, christmas= document.getElementById('input-c').value, original= document.getElementById('input-o').value,snow  = document.getElementById('input-s').value,state = document.getElementById('state').value;
-			if (name=="" || email=="" || address=="" || city=="" || state=="" || zip=="" || christmas=="" || snow=="" || original=="") {
+	if (name=="" || email=="" || address=="" || city=="" || state=="" || zip=="" || christmas=="" || snow=="" || original=="") {
         alert("Please complete all form");
-      } else {
+      } if {
+	alert("Please click reCAPTCHA");
+      }
+	    if(!(name=="" || email=="" || address=="" || city=="" || state=="" || zip=="" || christmas=="" || snow=="" || original=="" || grecaptcha.getResponse() == "")) {
         document.getElementById('wait-m').style.display = 'block';
         document.getElementById('checkout').style.display = 'none';
         Email.send({
@@ -217,7 +220,7 @@
               <h4>Send <b>$<span id="total"></span></b> to <b>mynameispyo@gmail.com</b> on <a target="_blank" href="https://www.paypal.com">Paypal</a></b></h4>
             </div>
           </div>
-          
+          <div class="g-recaptcha" data-sitekey="6Lfxy8QUAAAAAMi1gYbTmz6hJGOwWFi6_oeJ59ok"></div>
           <button onclick="makeOrder()" id="checkout" class="w3-button w3-red btn">Continue to checkout</button>
             <div id="wait-m" class="w3-center" style="display:none;">
               <img style="width:50px;height:50px;"  src="https://thumbs.gfycat.com/SkinnySeveralAsianlion-size_restricted.gif"></div>
