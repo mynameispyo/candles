@@ -1,10 +1,218 @@
+<!DOCTYPE html>
 <html>
 <head>
-<script data-ad-client="ca-pub-7412478711619182" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <meta charset="utf-8">
+  <title>c-and-le</title>
+  <link rel="shortcut icon" href="https://cdn-cms.f-static.com/uploads/2696757/400_5dfc40d311094.jpg" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" href="/css/all.css" media="all" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link type="text/css" rel="stylesheet" href="/css/checkout.css"media="all">
+  <script src="https://smtpjs.com/v3/smtp.js"></script>  
+	<script type="text/javascript">
+		function sendEmail() {
+      var name = document.getElementById('name').value, email = document.getElementById('email').value, phone = document.getElementById('phone').value, message= document.getElementById('message').value;
+			if (name=="" || email=="" || phone=="" || message=="") {
+        alert("Please complete all form");
+      } else {
+        document.getElementById('wait').style.display = 'block';
+        document.getElementById('contact-button').style.display = 'none';
+        Email.send({
+          SecureToken : "6b803461-532e-430c-b5c9-deb96e0243d3",
+          To : 'mynameispyo@gmail.com',
+          From : "the3countrys@naver.com",
+          Subject : "email subject",
+          Body : 'name:'+name+',email:'+email+',phone:'+phone+',message:'+message,
+        })
+        .then(function(message){
+          alert("mail sent successfully");
+          document.getElementById('wait').style.display = 'none';
+          document.getElementById('contact-button').style.display = 'block';
+        });
+      }
+		}
+    function realtimeClock() {
+      var prices = parseInt(document.getElementById('input-c').value, 10) * 3 + parseInt(document.getElementById('input-s').value, 10) * 3 + parseInt(document.getElementById('input-o').value, 10) * 2;
+      document.getElementById('price').innerHTML = prices;
+      document.getElementById('total').innerHTML = prices;
+      setTimeout("realtimeClock()", 1000);
+    }
+    function makeOrder() {
+      var name = document.getElementById('names').value, email = document.getElementById('emails').value, address = document.getElementById('address').value, city= document.getElementById('city').value, zip= document.getElementById('zip').value, christmas= document.getElementById('input-c').value, original= document.getElementById('input-o').value,snow  = document.getElementById('input-s').value,state = document.getElementById('state').value;
+			if (name=="" || email=="" || address=="" || city=="" || state=="" || zip=="" || christmas=="" || snow=="" || original=="") {
+        alert("Please complete all form");
+      } else {
+        document.getElementById('wait-m').style.display = 'block';
+        document.getElementById('checkout').style.display = 'none';
+        Email.send({
+          SecureToken : "6b803461-532e-430c-b5c9-deb96e0243d3",
+          To : 'mynameispyo@gmail.com',
+          From : "the3countrys@naver.com",
+          Subject : "email subject",
+          Body : 'name:'+name+',email:'+email+',address:'+address+',city:'+city+',state:'+state+',zip:'+zip+',snow:'+snow+',christmas:'+christmas+',original:'+original,
+        })
+        .then(function(message){
+          alert("mail sent successfully");
+          document.getElementById('wait-m').style.display = 'none';
+          document.getElementById('checkout').style.display = 'block';
+          
+        });
+      }
+		}
+	</script>
 </head>
-<frameset rows="100%,*" border="0">
-  <frame src="https://www.c-and-le.tk" frameborder="0" />
-</frameset>
+<body onload="realtimeClock()">
+<!--title-->
+<!-- Navbar -->
+<div>
+  <div class="w3-bar w3-red w3-card">
+    <a href="/" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
+    <a href="#store" class="w3-bar-item w3-button w3-padding-large w3-hide-small">STORE</a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+  </div>
+</div>
+<!--title img-->
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">C-AND-LE</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">The CHeap AND LEast price CANDLE</p>
+  </div>
+</div>
+<!--store-->
+<div id="store">
+<h1 class="shop-text">Our poducts(click image)</h1>
+<div class="merits">
+  <div class="merits__column merits__column--padding">
+    <button onclick="document.getElementById('id01').style.display='block'">
+      <img  class='img w3-hover-shadow' src="https://cdn-cms.f-static.com/uploads/2696757/1600_5dccb875e182a.jpg">
+    </button>
+    <p class="shop-text">Christmas tree candle <strong>$3</strong><p>
+  </div>
+  <div class="merits__column merits__column--border merits__column--padding">
+    <button onclick="document.getElementById('id01').style.display='block'">
+      <img class='img w3-hover-shadow' class="w3-hover-shadow" src="https://cdn-cms.f-static.com/uploads/2696757/1600_5dccb88aa6ed1.jpg"></a>
+    </button>
+    <p class="shop-text">Snow Flower shape candle <strong>$3</strong><p>
+  </div>
+  <div class="merits__column merits__column--padding">
+    <button onclick="document.getElementById('id01').style.display='block'">
+      <img class="w3-hover-shadow img" src="https://cdn-cms.f-static.com/uploads/2696757/2000_5dccb85bd8fb1.jpg"></a>
+    </button>
+    <p class="shop-text">original candle <strong>$2</strong><p></div>
+  </div>
+</div>
+<!--about-->
+<div id="about"/>
+<div class="two">
+  <h1 class="shop-text">About</h1>
+  <h2 class="shop-text">Have a nice winter by Cheap-And-LEast price CANDLE.😀</h2>
+  <div id="about" class="merits">
+    <fieldset class="shop-text"><legend>Do You Know</legend>
+    <p>Do you know why it is c-and-le? Because our products are <b>CH</b>eap <b>AND</b> <b>LE</b>ast price</p></fieldset>
+    <fieldset class="shop-text"><legend>Do You Know</legend>
+    <p>Do you know why it is not .com? Because I learning in <strong>T</strong>ena<strong>K</strong>ill -> TK middle school</p></fieldset>
+  </div>
+</div>
+<!--contact-->
+<div id="contact">
+<h1 class="shop-text">Contact with us</h1>
+<div class="w3-container" >
+  <div class="w3-row w3-section">
+    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+      <div class="w3-rest">
+        <input class="w3-input w3-border w3-animate-input"  id="name" type="text" placeholder="First Name">
+      </div>
+  </div>
+
+  <div class="w3-row w3-section">
+    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+      <div class="w3-rest">
+        <input class="w3-input w3-border w3-animate-input" id="email" type="email" placeholder="Email">
+      </div>
+  </div>
+
+  <div class="w3-row w3-section">
+    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+      <div class="w3-rest">
+        <input class="w3-input w3-border w3-animate-input"  id="phone" type="text" placeholder="Phone">
+      </div>
+  </div>
+
+  <div class="w3-row w3-section">
+    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+      <div class="w3-rest">
+        <input class="w3-input w3-border w3-animate-input"  id="message" type="text" placeholder="Message">
+      </div>
+  </div>
+
+  <button id="contact-button" class="w3-button w3-block w3-section w3-blue w3-ripple w3-padding w3-animate-button" onclick="sendEmail()">Submit</button>
+  <div id="wait" class="w3-center" style="display:none;">
+    <img style="width:50px;height:50px;"  src="https://thumbs.gfycat.com/SkinnySeveralAsianlion-size_restricted.gif"></div>
+  </div>
+<hr>
+<p>&copy 2019-2020 Inpyo Lee(www.c-and-le.tk) all rights reserved</p>
+
+<!--buy-->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <header class="w3-container w3-red"> 
+      <span onclick="document.getElementById('id01').style.display='none'" 
+      class="w3-button w3-display-topright">&times;</span>
+      <h1>Make Order</h1>
+    </header>
+    <div class="container">
+      <h2>Cart</h2>
+      <hr>
+      <h4><span id="product">Christmas tree candle $3</span> <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <input id="input-c" type="number" min="0" max="15" value="3"></span></h4>
+      <h4><span id="product">Snow Flower shape candle $3</span> <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <input id="input-s" type="number" min="0" max="15" value="0"></span></h4>
+      <h4><span id="product">original candle $2</span> <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <input type="number" id="input-o" min="0" max="15" value="0"></span></h4>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$<span id="price"></span></b></span></p>
+    </div>
+    <div class="row">
+      <div class="col-75">
+        <div class="container">      
+          <div class="row">
+            <div class="col-50">
+              <h3>Billing Address</h3>
+              <label for="name"><i class="fa fa-user"></i> Full Name</label>
+              <input type="text" id="names" class="input-m" name="name" placeholder="John M. Doe">
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="emails" class="input-m" name="email" placeholder="john@example.com">
+              <label for="address"><i class="fa fa-address-card-o"></i> Address</label>
+              <input type="text" id="address" class="input-m"  name="address" placeholder="542 W. 15th Street">
+              <label for="city"><i class="fa fa-institution"></i> City</label>
+              <input type="text" id="city" class="input-m" name="city" placeholder="New York">
+
+              <div class="row">
+                <div class="col-50">
+                  <label for="state">State</label>
+                  <input type="text" id="state" class="input-m" name="state" placeholder="NY">
+                </div>
+                <div class="col-50">
+                  <label for="zip">Zip</label>
+                  <input type="text" id="zip" class="input-m" name="zip" placeholder="10001">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-50">
+              <h3>Payment</h3>
+              <h4>Send <b>$<span id="total"></span></b> to <b>mynameispyo@gmail.com</b> on <a target="_blank" href="https://www.paypal.com">Paypal</a></b></h4>
+            </div>
+          </div>
+          
+          <button onclick="makeOrder()" id="checkout" class="w3-button w3-red btn">Continue to checkout</button>
+            <div id="wait-m" class="w3-center" style="display:none;">
+              <img style="width:50px;height:50px;"  src="https://thumbs.gfycat.com/SkinnySeveralAsianlion-size_restricted.gif"></div>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
 </body>
 </html>

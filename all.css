@@ -1,0 +1,75 @@
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('https://cdn-cms.f-static.com/uploads/2696757/2000_5ddec58f747d2.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  top: 50%;
+  left: 50%;      
+}
+.shop-text {
+  text-align: center;
+}
+.two {
+  background-color: rgb(240, 240, 240);
+  clear: both;
+}
+.merits{
+  display:-webkit-box;
+  display:flex;
+  -webkit-box-orient:horizontal;
+  -webkit-box-direction:normal;
+  flex-direction:row;
+  justify-content:space-around;
+  padding:120px 0 80px;
+  margin:0 auto;
+  max-width:1408px;
+  //min-height:458px;
+  line-height:1.7;
+  flex-wrap:wrap;
+}@media (min-width:768px){.merits{flex-wrap:nowrap;padding-left:16px;padding-right:16px}}
+.merits__column{display:-webkit-box;display:flex;-webkit-box-orient:vertical;
+-webkit-box-direction:normal;flex-direction:column;-webkit-box-align:center;
+align-items:center;flex-basis:30%;-webkit-box-flex:1;flex-grow:1;min-width:250px;
+padding-left:16px;padding-right:16px;
+text-align:center}@media (max-width:767px){.merits__column{flex-basis:100%}
+.merits__column--border{
+  border-top:1px solid rgba(0,0,0,.1);
+  border-bottom:1px solid rgba(0,0,0,.1)
+}
+.merits__column--padding{padding:40px 0}
+.merits__column--padding:first-child{padding:0 0 40px}
+.merits__column--padding:last-child{padding:40px 0 0}}
+/*
+  .merits__imageContainer{min-height:94px}
+.merits__title{margin:32px 0}
+.merits__description{text-align:center}
+.merits__externalLinkImage{width:13px;top:2px;left:-1px;position:relative}
+.merits__leftLink,.merits__rightLink{border-bottom:1px solid #333}
+.merits__rightLink{margin-left:6px}
+*/
+button {
+  outline: 0px;
+  border: 0px;
+  border-bottom: 0px;
+  margin: 0px;
+  padding:0px;
+  margin-bottom: 0px;
+}
+button:focus,
+button:active,
+button:focus, {
+  outline: 0px;
+  border: 0px;
+  border-bottom: 0px;
+  margin: 0px;
+  padding:0px;
+  margin-bottom: 0px;
+}
