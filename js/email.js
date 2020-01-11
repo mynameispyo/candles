@@ -4,7 +4,7 @@ function sendEmail() {
         alert("Please complete all form");
       } if(grecaptcha.getResponse() == "") {
 		alert("please click reCAPTCHA")
-	} else {
+	} if(!(name=="" || email=="" || phone=="" || message=="" || grecaptcha.getResponse() == "")) {
         document.getElementById('wait').style.display = 'block';
         document.getElementById('contact-button').style.display = 'none';
         Email.send({
