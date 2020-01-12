@@ -4,7 +4,7 @@ function sendEmail() {
         alert("Please complete all form");
       } if(grecaptcha.getResponse("captchaContact") == "") {
 		alert("please click reCAPTCHA")
-	} if(!(name=="" || email=="" || phone=="" || message=="" || grecaptcha.getResponse() == "")) {
+	} if(!(name=="" || email=="" || phone=="" || message=="" || grecaptcha.getResponse() == "captchaContact")) {
         document.getElementById('wait').style.display = 'block';
         document.getElementById('contact-button').style.display = 'none';
         Email.send({
@@ -33,7 +33,7 @@ function sendEmail() {
         alert("Please complete all form");
       } if(grecaptcha.getResponse("captchaCheckout") == "") {
         alert("Please click reCAPTCHA");
-      } if(!(name=="" || email=="" || address=="" || city=="" || state=="" || zip=="" || christmas=="" || snow=="" || original=="" || grecaptcha.getResponse() === "")) {
+      } if(!(name=="" || email=="" || address=="" || city=="" || state=="" || zip=="" || christmas=="" || snow=="" || original=="" || grecaptcha.getResponse("captchaCheckout") === "")) {
         document.getElementById('wait-m').style.display = 'block';
         document.getElementById('checkout').style.display = 'none';
         Email.send({
@@ -51,9 +51,13 @@ function sendEmail() {
         });
       }
 		}
-var captchaCheckout = grecaptcha.render( 'CaptchaForCheckout', {
-  'sitekey' : '6Lfxy8QUAAAAAMi1gYbTmz6hJGOwWFi6_oeJ59ok',
-});
-var captchaContact = grecaptcha.render( 'CaptchaForContact', {
-  'sitekey' : '6Lfxy8QUAAAAAMi1gYbTmz6hJGOwWFi6_oeJ59ok',
-});
+var onloadCallback1 = function1() {
+  var captchaCheckout = grecaptcha.render( 'CaptchaForCheckout', {
+    'sitekey' : '6Lfxy8QUAAAAAMi1gYbTmz6hJGOwWFi6_oeJ59ok',
+  });
+}
+var onloadCallback2 = function2() {
+  var captchaContact = grecaptcha.render( 'CaptchaForContact', {
+    'sitekey' : '6Lfxy8QUAAAAAMi1gYbTmz6hJGOwWFi6_oeJ59ok',
+  });
+}
