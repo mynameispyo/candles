@@ -31,7 +31,9 @@ function sendEmail() {
       var name = document.getElementById('names').value, email = document.getElementById('emails').value, address = document.getElementById('address').value, city= document.getElementById('city').value, zip= document.getElementById('zip').value, christmas= document.getElementById('input-c').value, original= document.getElementById('input-o').value,snow  = document.getElementById('input-s').value,state = document.getElementById('state').value;
 			if (name=="" || email=="" || address=="" || city=="" || state=="" || zip=="" || christmas=="" || snow=="" || original=="") {
         alert("Please complete all form");
-      } else {
+      } if(grecaptcha.getResponse() == "") {
+        alert("Please click reCAPTCHA");
+      } if(!(name=="" || email=="" || address=="" || city=="" || state=="" || zip=="" || christmas=="" || snow=="" || original=="" || grecaptcha.getResponse() == "" )) {
         document.getElementById('wait-m').style.display = 'block';
         document.getElementById('checkout').style.display = 'none';
         Email.send({
