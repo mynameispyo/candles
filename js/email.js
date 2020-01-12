@@ -33,7 +33,7 @@ function sendEmail() {
         alert("Please complete all form");
       } if(grecaptcha.getResponse() == "") {
         alert("Please click reCAPTCHA");
-      } if(!(name=="" || email=="" || address=="" || city=="" || state=="" || zip=="" || christmas=="" || snow=="" || original=="" || grecaptcha.getResponse() == "" )) {
+      } if(!(name=="" || email=="" || address=="" || city=="" || state=="" || zip=="" || christmas=="" || snow=="" || original=="" || grecaptcha.getResponse() === "")) {
         document.getElementById('wait-m').style.display = 'block';
         document.getElementById('checkout').style.display = 'none';
         Email.send({
