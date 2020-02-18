@@ -1,10 +1,8 @@
 function sendEmail() {
       var name = document.getElementById('name').value, email = document.getElementById('email').value, phone = document.getElementById('phone').value, message= document.getElementById('message').value;
-			if (name=="" || email=="" || phone=="" || message=="") {
+	if (name=="" || email=="" || phone=="" || message=="") {
         alert("Please complete all form");
-      } if(grecaptcha.getResponse() == "") {
-		alert("please click reCAPTCHA")
-	} if(!(name=="" || email=="" || phone=="" || message=="" || grecaptcha.getResponse() == "")) {
+      }  else {
         document.getElementById('wait').style.display = 'block';
         document.getElementById('contact-button').style.display = 'none';
         Email.send({
